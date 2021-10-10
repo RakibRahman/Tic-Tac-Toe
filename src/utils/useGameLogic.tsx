@@ -15,7 +15,7 @@ const useGameLogic = (): ReturnValue => {
   const [players, setPlayers] = useState(["", ""]);
 
   useEffect(() => {
-    if (status == "created") return;
+    if (status === "created") return;
     const winningPositions = [
       [0, 1, 2],
       [3, 4, 5],
@@ -44,10 +44,10 @@ const useGameLogic = (): ReturnValue => {
     }
     if (winner) {
       setWinner(winner === "X" ? players[0] : players[1]);
-      setStatus("completed");
+      setStatus("finished");
       return;
     }
-    setStatus(board.filter((value) => !value).length ? "started" : "completed");
+    setStatus(board.filter((value) => !value).length ? "started" : "finished");
   }, [status, board, players]);
 
   const handleClick = (index: number): void => {

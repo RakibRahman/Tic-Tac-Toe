@@ -5,7 +5,7 @@ interface Props {
 
 export const GameOver = ({ name, handleRestart }: Props) => {
   return (
-    <div>
+    <div className="gameover">
       <h1>
         {name && `Player ${name} won the game`}
         {!name && `Its a tie`}
