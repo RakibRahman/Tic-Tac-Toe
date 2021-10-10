@@ -4,7 +4,7 @@ interface Props {
   value: string;
   handleClick(index: number): void;
 }
-const Board = ({ index, value, handleClick }: Props) => {
+export const Board = ({ index, value, handleClick }: Props) => {
   return (
     <div>
       <button className="board-btn" onClick={() => handleClick(index)}>
@@ -13,5 +13,3 @@ const Board = ({ index, value, handleClick }: Props) => {
     </div>
   );
 };
-
-export default Board;

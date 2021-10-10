@@ -3,13 +3,22 @@
   padding: 0;
   box-sizing: border-box;
 }
+.App {
+  display: grid;
+  place-items: center;
+  margin-top: 10rem;
+}
 .game-board {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   width: 300px;
 }
+
 .board-btn {
   width: 100px;
   height: 100px;
   font-size: 2rem;
+}
+.board-btn:hover {
+  background-color: red;
 }

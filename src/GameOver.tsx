@@ -3,7 +3,7 @@ interface Props {
   handleRestart(): void;
 }
 
-const GamOver = ({ name, handleRestart }: Props) => {
+export const GameOver = ({ name, handleRestart }: Props) => {
   return (
     <div>
       <h1>
@@ -14,5 +14,3 @@ const GamOver = ({ name, handleRestart }: Props) => {
     </div>
   );
 };
-
-export default GamOver;
