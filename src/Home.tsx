@@ -27,14 +27,14 @@ export const Home = ({ handleStart }: Props) => {
     <>
       <h1>Tic Tac Toe</h1>
       <form onSubmit={handleSubmit}>
-        <label htmlFor="player1">Player 1:</label>
+        <label htmlFor="player1">Player One:</label>
         <input
           type="text"
           id="player1"
           value={players[0]}
           onInput={(e) => handleInput(e, 0)}
         />
-        <label htmlFor="player2">Player 2:</label>
+        <label htmlFor="player2">Player Two:</label>
         <input
           type="text"
           value={players[1]}

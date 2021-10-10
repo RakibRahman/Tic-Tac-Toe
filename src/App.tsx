@@ -12,7 +12,12 @@ export const App = () => {
         <GameOver name={game.winner} handleRestart={game.handleRestart} />
       )}
       {game.status === "started" && (
-        <Game board={game.board} handleClick={game.handleClick} />
+        <Game
+          board={game.board}
+          handleClick={game.handleClick}
+          turn={game.turn}
+          players={game.players}
+        />
       )}
     </div>
   );

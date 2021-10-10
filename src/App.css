@@ -6,10 +6,11 @@
 .App {
   display: grid;
   place-content: center;
-  background-color: #ff4e00;
-  background-image: linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%);
+  background-color: #2a2a72;
+  background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
   height: 100vh;
   color: whitesmoke;
+  font-size: 1.5rem;
 }
 h1 {
   text-align: center;
@@ -24,15 +25,20 @@ form input {
   width: 20rem;
   padding: 0.5rem;
 }
+
 button {
   padding: 0.5rem;
   color: whitesmoke;
-  background-color: #7f5a83;
-  background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+  background-color: #6b0f1a;
+  background-image: linear-gradient(315deg, #6b0f1a 0%, #b91372 74%);
   border: none;
   outline: none;
   border-radius: 5px;
   cursor: pointer;
+  font-size: 1.5rem;
+}
+button:disabled {
+  opacity: 0.4;
 }
 .game-board {
   display: grid;
@@ -41,12 +47,16 @@ button {
 }
 
 .board-btn {
+  display: grid;
+  place-items: center;
   width: 100px;
   height: 100px;
-  font-size: 2rem;
+  font-size: 5rem;
   background-color: #2a2a72;
   background-image: linear-gradient(315deg, #2a2a72 0%, #009ffd 74%);
   border-radius: 0;
+  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+  color: #ffa500;
 }
 .board-btn:hover {
   background-color: red;
@@ -58,4 +68,10 @@ button {
 }
 .gameover h1 {
   font-size: 3rem;
+}
+.turn {
+  text-align: center;
+  width: 100%;
+  font-size: 1.2rem;
+  transition: all 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
 }

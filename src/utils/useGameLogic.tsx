@@ -1,8 +1,12 @@
 import { useState, useEffect } from "react";
+
 interface ReturnValue {
   board: string[];
   status: string;
+  turn: string;
   winner: string | null;
+  players: string[];
+
   handleClick: (index: number) => void;
   handleRestart: () => void;
   handleStart: (players: string[]) => void;
@@ -56,6 +60,7 @@ const useGameLogic = (): ReturnValue => {
     newBoard.splice(index, 1, turn);
     setBoard(newBoard);
     const newTurn = turn === "X" ? "O" : "X";
+
     setTurn(newTurn);
   };
   const handleStart = (players: string[]) => {
@@ -68,6 +73,15 @@ const useGameLogic = (): ReturnValue => {
     setWinner("");
     setStatus("created");
   };
-  return { board, status, winner, handleClick, handleStart, handleRestart };
+  return {
+    board,
+    status,
+    winner,
+    handleClick,
+    handleStart,
+    handleRestart,
+    turn,
+    players,
+  };
 };
 export default useGameLogic;

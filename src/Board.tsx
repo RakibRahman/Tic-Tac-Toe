@@ -1,7 +1,7 @@
-import React from "react";
 interface Props {
   index: number;
   value: string;
+
   handleClick(index: number): void;
 }
 export const Board = ({ index, value, handleClick }: Props) => {
